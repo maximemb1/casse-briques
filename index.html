@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable =no">
+    <title>Casse-Brique</title>
+    <link rel="icon" type="image/png" href="favicon_moi.png">
+    <link rel = "stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Casse-Brique</h1>
+    <section id="pop-up">
+        <h3 id="titre_popup"></h3>
+        <div id="contenu_popup"></div>
+
+        <button class="btn" onclick="valider_popup()">Valider</button>
+        <button class="btn" onclick="fermer_pop_up()">Annuler</button>
+    </section>
+
+    <section id="profil">
+        <h2 class="nom_joueur"></h2>
+        <h3 id="titre"></h3>
+        <button class="btn" id="btn_nom" onclick="ouvrir_pop_up('nom')">Choisir un nom</button>
+        <h3>Quêtes quotidiennes</h3>
+        <div id="place_quete"></div>
+        <button class="btn" id="ach_quete" onclick="acheter_quete()">Quête supp. 20💎</button>
+        <!-- <button id="stats" class="btn">Tes Statistiques</button> -->
+    </section>
+    
+    <section id="menu">
+        <button class="btn" id="btn_passe" onclick="afficher_ecran('passe_de_casse')">Passe de casse</button>
+        <button class="btn mode" id="jouer" onclick="demarrer_jeu(game.base)">Mode base</button>
+        <div id="place_modes"></div>
+        <button class="btn mode" id="jouer" onclick="demarrer_jeu(game.boss)">Mode BOSS</button>
+        <button class="btn" id="shop" onclick="afficher_ecran('shop_ecr')">Boutique</button>
+        <button class="btn" id="succes" onclick="afficher_ecran('succes_ecr')">Succes</button>
+    </section>
+
+    <section id="passe_de_casse">
+        <h2>Passe de casse</h2>
+        <h2 id="nom_passe"></h2>
+        <div id="aff_palier_suivant"></div>
+        <button class="btn" id="btn_passe_suiv" onclick="passe_suivant()">Passe de casse suivant</button>
+        <div id="conteneur_passe">
+        </div>
+        <button class="btn fixe" onclick="afficher_ecran('menu')">Retour menu</button>
+    </section>
+
+    <div id="jeu_container">
+        <button class="btn" id="btn_pause" onclick="jeu_pause()">⏸️</button>
+        <canvas id="canvas"></canvas> 
+        <div id="message"> </div>
+
+        <section id="victoire">
+            <h2>Victoire !</h2>
+            <p id="meilleur_score_v"> </p>
+            <button class="btn" id="rejouer_victoire" onclick="rejouer()">Rejouer</button>
+            <button class="btn" onclick="afficher_ecran('menu')">Retour au menu</button>
+        </section>
+
+        <section id="defaite">
+            <h2>Game Over</h2>
+            <p id="meilleur_score_d"> </p>
+            <button class="btn" id="rejouer_defaite" onclick="rejouer()">Rejouer</button>
+            <button class="btn" onclick="afficher_ecran('menu')">Retour au menu</button>
+        </section>
+        <button class="btn fixe" onclick="afficher_ecran('menu')">Retour menu</button>
+    </div>
+    
+    <div id="message_ui">
+    </div>
+
+    <section id="pause">
+        <h2>Pause</h2>
+        <p>Appuis sur espace ou sur le bouton reprendre pour continuer</p>
+        <button class="btn" onclick="jeu_pause()">Reprendre</button>
+    </section>
+
+    <section id="shop_ecr">
+        <h2>Boutique</h2>
+        <div class="shop_onglet" id="shop_onglet"></div>
+        <p id="or"></p>
+        <div id="place_skin_shop"></div>
+        <button class="btn fixe" onclick="afficher_ecran('menu')">Retour menu</button>
+    </section>
+
+    <section id="succes_ecr">
+        <h2>Succès</h2>
+        <div id="place_suc"></div>
+        <button class="btn fixe" onclick="afficher_ecran('menu')">Retour menu</button>
+    </section>
+    <br><br>
+    <!-- <section id="debug">
+        <p id="b_impacte"> </p>
+        <p id="nbr_b"> </p>
+    </section>-->
+    
+    <script src= "variables.js"></script>
+    <script src="shop_succes_quete.js"></script>
+    <script src="input.js"></script>
+    <script src= "physics.js"></script>
+    <script src= "draw.js"></script>
+    <script src="modes.js"></script>
+    <script src= "main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+</body>
