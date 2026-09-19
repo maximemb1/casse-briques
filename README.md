@@ -18,7 +18,7 @@ Un jeu de casse-brique développé en JavaScript, jouable directement dans un na
  </ul>
 
 <h2>Organisation</h2> 
-
+<pre>
 casse-brique/ <br>
     index.html <br>
     style.css <br>
@@ -29,6 +29,7 @@ casse-brique/ <br>
     draw.js <br>
     modes.js <br>
     main.js <br>
+</pre>
 
 <h2>Lancer le projet</h2> 
 Tape le liens suivant dans un navigateur <a href="https://maximemb1.github.io/casse-briques/">https://maximemb1.github.io/casse-briques/ </a>
