@@ -1,4 +1,4 @@
-<img width="100" height="100" alt="logo_casse-briques" src="https://github.com/user-attachments/assets/4245f2d3-2071-47ef-a0ad-4ef0c50d5088" /> Casse-Briques <br>
+<img width="100" height="100" alt="logo_casse-briques" src="https://github.com/user-attachments/assets/4245f2d3-2071-47ef-a0ad-4ef0c50d5088" /> <br><br> <h1>Casse-Briques</1> <br>
 Un jeu de casse-brique développé en JavaScript, jouable directement dans un navigateur. 
 
 Fonctionnalités
